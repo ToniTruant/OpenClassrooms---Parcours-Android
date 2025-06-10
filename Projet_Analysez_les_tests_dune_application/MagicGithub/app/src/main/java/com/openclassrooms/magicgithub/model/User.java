@@ -34,7 +34,9 @@ public class User {
         if (obj == null) return false;
         if (obj == this) return true;
         if (!(obj instanceof User)) return false;
-        return (((User) obj).avatarUrl == this.avatarUrl && ((User) obj).login == this.login);
+        User other = (User) obj;
+        return Objects.equals(other.avatarUrl, this.avatarUrl)
+                && Objects.equals(other.login, this.login);
     }
 
     @Override

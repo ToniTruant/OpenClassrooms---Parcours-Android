@@ -27,7 +27,7 @@ public class UserDiffCallback extends DiffUtil.Callback{
 
     @Override
     public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-        return oldUsers.get(oldItemPosition).getId() == newUsers.get(newItemPosition).getId() ;
+        return oldUsers.get(oldItemPosition).getId().equals(newUsers.get(newItemPosition).getId());
     }
 
     @Override
